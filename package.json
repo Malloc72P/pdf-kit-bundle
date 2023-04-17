@@ -10,6 +10,10 @@
     "browserify": "browserify src/main.js -o testing-bed/public/browserify-bundle.js",
     "browserify:pdfkit": "browserify src/pdfkit.js --s PDFDocument -o staging/pdfkit.js",
     "browserify:blob-stream": "browserify src/blob-stream.js --s blobStream -o staging/blob-stream.js",
+    "browserify:pdfkit2": "browserify src/pdfkit.js -o staging/pdfkit.js",
+    "browserify:blob-stream2": "browserify src/blob-stream.js -o staging/blob-stream.js",
+    "build-1": "yarn browserify:pdfkit && yarn browserify:blob-stream && cp -r staging/* testing-bed/public",
+    "build-2": "yarn browserify:pdfkit2 && yarn browserify:blob-stream2 && cp -r staging/* testing-bed/public",
     "rollup": "rollup -c"
   },
   "dependencies": {
