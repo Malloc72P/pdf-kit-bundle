@@ -1,0 +1,18 @@
+{
+  "name": "@malloc72p/eslint-config-malloc72p",
+  "description": "ES-Lint For mono repo",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "lint": "eslint ."
+  },
+  "dependencies": {
+    "@typescript-eslint/eslint-plugin": "^5.45.0",
+    "eslint": "^8.29.0",
+    "eslint-config-next": "^13.0.6",
+    "eslint-config-prettier": "^8.5.0",
+    "prettier": "^2.8.0",
+    "eslint-plugin-prettier": "^4.2.1"
+  }
+}

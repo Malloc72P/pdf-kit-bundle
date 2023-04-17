@@ -1,0 +1,24 @@
+{
+  "name": "vite-module",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "main": "dist/vite-module.js",
+  "types": "dist/main.d.ts",
+  "exports": {
+    ".": "./dist/vite-module.js"
+  },
+  "files": ["dist"],
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview",
+    "lint": "eslint --fix ./"
+  },
+  "devDependencies": {
+    "@malloc72p/eslint-config-malloc72p": "1.0.0",
+    "typescript": "^4.9.3",
+    "vite": "^4.0.0",
+    "vite-plugin-dts": "^1.7.1"
+  }
+}

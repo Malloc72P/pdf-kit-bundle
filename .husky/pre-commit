@@ -1,0 +1,17 @@
+#!/usr/bin/env sh
+. "$(dirname -- "$0")/_/husky.sh"
+
+# lint
+yarn lint
+git add -A .
+
+# test next app
+# yarn --cwd "apps/next-app" build 
+# yarn --cwd "apps/next-app" start &
+
+# yarn --cwd "apps/e2e-test" lint 
+# yarn --cwd "apps/e2e-test" test
+
+# kill $(lsof -t -sTCP:LISTEN -i:3000)
+
+echo "task complete"

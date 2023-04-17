@@ -1,0 +1,3 @@
+{
+  "extends": "@malloc72p/tsconfig/base.json"
+}

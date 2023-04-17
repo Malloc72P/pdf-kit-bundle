@@ -1,0 +1,12 @@
+{
+  "files.autoSave": "afterDelay",
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true
+  },
+  "[prisma]": {
+    "editor.defaultFormatter": "Prisma.prisma"
+  },
+  "files.insertFinalNewline": true,
+  "eslint.alwaysShowStatus": true,
+  "eslint.format.enable": true
+}

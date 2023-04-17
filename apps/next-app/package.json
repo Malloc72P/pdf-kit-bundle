@@ -1,0 +1,29 @@
+{
+  "name": "next-app",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "prebuild": "yarn prisma generate",
+    "build": "next build",
+    "start": "next start",
+    "lint": "eslint --fix ./"
+  },
+  "dependencies": {
+    "@emotion/react": "^11.10.5",
+    "@mantine/core": "^5.8.2",
+    "@mantine/hooks": "^5.8.2",
+    "@tabler/icons": "^1.112.0",
+    "next": "13.0.4",
+    "react": "18.2.0",
+    "react-dom": "18.2.0"
+  },
+  "devDependencies": {
+    "@types/node": "18.11.9",
+    "@types/react": "18.0.25",
+    "@types/react-dom": "18.0.9",
+    "@malloc72p/prepared-prisma": "1.0.0",
+    "@malloc72p/eslint-config-malloc72p": "1.0.0",
+    "@malloc72p/tsconfig": "1.0.0"
+  }
+}

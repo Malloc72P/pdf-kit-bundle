@@ -1,0 +1,74 @@
+---
+import { Icon } from 'astro-icon';
+import { getHomePermalink, getPermalink } from '~/utils/permalinks';
+
+// {
+// 	title: 'Product',
+// 	items: [
+// 		{ title: 'Features', href: '#' },
+// 		{ title: 'Security', href: '#' },
+// 		{ title: 'Team', href: '#' },
+// 		{ title: 'Enterprise', href: '#' },
+// 		{ title: 'Customer stories', href: '#' },
+// 		{ title: 'Pricing', href: '#' },
+// 		{ title: 'Resources', href: '#' },
+// 	],
+// }
+const links = [
+	{
+		title: '🍙 Malloc72P',
+		items: [{ title: 'Github', href: 'https://github.com/Malloc72P' }],
+	},
+];
+
+const social = [
+	{ label: 'Twitter', icon: 'tabler:brand-twitter', href: '#' },
+	{ label: 'Instagram', icon: 'tabler:brand-instagram', href: '#' },
+	{ label: 'Facebook', icon: 'tabler:brand-facebook', href: '#' },
+	{ label: 'RSS', icon: 'tabler:rss', href: getPermalink('/rss.xml') },
+	{ label: 'Github', icon: 'tabler:brand-github', href: 'https://github.com/onwidget/astrowind' },
+];
+---
+
+<footer class="border-t border-gray-200 dark:border-slate-800">
+	<div class="max-w-6xl mx-auto px-4 sm:px-6">
+		<div class="grid grid-cols-12 gap-4 gap-y-8 sm:gap-8 py-8 md:py-12">
+			<!-- <div class="col-span-12 lg:col-span-4">
+				<div class="mb-2">
+					<a class="inline-block font-bold text-xl" href={getHomePermalink()}>🐱 CatShark</a>
+				</div>
+				<div class="text-sm text-gray-600">
+					<a
+						class="text-gray-600 hover:text-gray-700 dark:text-gray-400 hover:underline transition duration-150 ease-in-out"
+						href={getPermalink('/terms')}>Terms</a
+					> ·
+					<a
+						class="text-gray-600 hover:text-gray-700 dark:text-gray-400 hover:underline transition duration-150 ease-in-out"
+						href={getPermalink('/privacy')}>Privacy Policy</a
+					>
+				</div>
+			</div> -->
+			{
+				links.map(({ title, items }) => (
+					<div class="col-span-12 md:col-span-6 lg:col-span-6">
+						<div class="text-gray-800 dark:text-gray-300 font-medium mb-2">{title}</div>
+						{items && Array.isArray(items) && items.length > 0 && (
+							<ul class="text-sm">
+								{items.map(({ title, href }) => (
+									<li class="mb-2">
+										<a
+											class="text-gray-600 hover:text-gray-700 hover:underline dark:text-gray-400 transition duration-150 ease-in-out"
+											href={href}
+										>
+											{title}
+										</a>
+									</li>
+								))}
+							</ul>
+						)}
+					</div>
+				))
+			}
+		</div>
+	</div>
+</footer>
