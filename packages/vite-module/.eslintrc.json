@@ -1,4 +1,0 @@
-{
-  "extends": ["@malloc72p/eslint-config-malloc72p"],
-  "ignorePatterns": ["dist"]
-}

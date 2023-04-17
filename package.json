@@ -1,26 +1,31 @@
 {
-  "name": "nsc-web-template",
+  "name": "pdf-kit-bundle-test",
   "version": "1.0.0",
   "main": "index.js",
-  "repository": "https://github.com/Malloc72P/nsc-web-template.git",
+  "repository": "https://github.com/Malloc72P/pdf-kit-bundle.git",
   "author": "Malloc72P <scra1028@gmail.com>",
   "license": "MIT",
+  "type": "module",
   "scripts": {
-    "postinstall": "husky install",
-    "build": "turbo run build",
-    "test": "turbo run test",
-    "lint": "turbo run lint",
-    "start": "turbo run start",
-    "dev": "turbo run dev"
+    "browserify": "browserify src/main.js -o testing-bed/public/browserify-bundle.js",
+    "browserify:pdfkit": "browserify src/pdfkit.js --s PDFDocument -o staging/pdfkit.js",
+    "browserify:blob-stream": "browserify src/blob-stream.js --s blobStream -o staging/blob-stream.js",
+    "rollup": "rollup -c"
   },
-  "workspaces": [
-    "apps/*",
-    "packages/*"
-  ],
-  "private": true,
-  "devDependencies": {
-    "husky": "^8.0.2",
-    "turbo": "^1.6.3",
-    "@malloc72p/eslint-config-malloc72p": "1.0.0"
+  "dependencies": {
+    "@rollup/plugin-commonjs": "^24.1.0",
+    "@rollup/plugin-inject": "^5.0.3",
+    "@rollup/plugin-json": "^6.0.0",
+    "@rollup/plugin-node-resolve": "^15.0.2",
+    "blob": "^0.1.0",
+    "blob-stream": "^0.1.3",
+    "brfs": "^2.0.2",
+    "browserify": "^17.0.0",
+    "iconv-lite": "^0.6.3",
+    "pdfkit": "^0.13.0",
+    "rollup": "^3.20.4",
+    "rollup-plugin-polyfill": "^4.0.0",
+    "rollup-plugin-polyfill-node": "^0.12.0",
+    "stream": "^0.0.2"
   }
 }

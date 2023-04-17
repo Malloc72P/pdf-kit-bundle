@@ -1,1 +1,0 @@
-export { InaButton } from './InaButton';

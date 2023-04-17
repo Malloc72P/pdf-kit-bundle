@@ -8,5 +8,6 @@
   },
   "files.insertFinalNewline": true,
   "eslint.alwaysShowStatus": true,
-  "eslint.format.enable": true
+  "eslint.format.enable": true,
+  "files.exclude": {}
 }
